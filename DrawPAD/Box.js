@@ -13,16 +13,25 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-function Point(x, y, strokeweight, strokecolor) {
+function Box(x, y, width, height, strokeweight, strokecolor, fillcolor) {
+
+
     this.x = x;
     this.y = y;
-    this.strokeweight = strokeweight;
-    this.strokecolor = strokecolor;
+    this.height = height;
+    this.width = width;
+    this.strokeweight = strokeweight || 1;
+    this.strokecolor = strokecolor || color(255);
+    this.fillcolor = fillcolor || color(0,0,0,0);
 
-    this.draw = function() {
-        strokeWeight(this.strokeweight);
-        stroke(this.strokecolor);
-        point(this.x, this.y);
 
+    this.draw = function()
+    {
+      stroke(this.strokecolor );
+      strokeWeight(this.strokeweight);
+      fill(this.fillcolor);
+      rect(this.x,this.y,this.width,this.height);
     }
+
+
 };

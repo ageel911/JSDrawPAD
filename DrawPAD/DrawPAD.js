@@ -20,8 +20,15 @@ function DrawPad() {
 
     this.initiate = function() {
 
-        for (i = 0; i < 500; i = i + .1) {
-            this.addElement(new Line(i * 20, i * 10, 500 - i, i * 11, 3, 255));
+        for (i = 0; i < 500; i = i + 1) {
+            // Box Test
+            this.addElement(new Box(i * 4, i * 4, 500 - i * 4, 500 - i * 4, 1, color(255, 255, 255, 100), color(255, 255, 255, 0)));
+
+            // Line Test
+            this.addElement(new Line(i * 10, i * 4, 500 - i, i * 5, 1, color(255, 255, 0, 255)));
+
+            // Point Test
+            this.addElement(new Point(i * 5 , i * 6, 4, color(255, 0, 255, 255)));
         }
     }
 
