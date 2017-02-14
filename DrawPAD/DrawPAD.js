@@ -6,8 +6,8 @@ function DrawPad() {
     this.initiate = function() {
 
         for (i = 0; i < 500; i=i+.1) {
-            this.addElement(new Line(i*20,500-i,255));
-
+            this.addElement(new Line(i*20,i*10,500- i,i*11,255));
+                                                                                                                                                                                                                                                                                                                                                                                               
         }
     }
 
